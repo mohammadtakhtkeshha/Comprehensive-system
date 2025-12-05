@@ -1,19 +1,7 @@
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
 // @ts-check
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  // Sidebar اصلی برای مستندات
   tutorialSidebar: [
     'intro',
     {
@@ -27,7 +15,6 @@ const sidebars = {
     },
   ],
 
-  // Sidebar برای ماژول‌ها
   modules: [
     {
       type: 'category',
@@ -40,89 +27,77 @@ const sidebars = {
         'modules/merchant-management/mid-tid-mapping',
       ],
     },
+
     {
       type: 'category',
       label: '۲. مدیریت ترمینال و انبار',
-      items: [
-        'modules/terminal-management/overview',
-      ],
+      items: ['modules/terminal-management/overview'],
     },
+
     {
       type: 'category',
       label: '۳. پردازش تراکنش و تسویه',
-      items: [
-        'modules/transaction-processing/overview',
-      ],
+      items: ['modules/transaction-processing/overview'],
     },
+
     {
       type: 'category',
       label: '۴. مانیتورینگ و رخدادها',
-      items: [
-        'modules/monitoring/overview',
-      ],
+      items: ['modules/monitoring/overview'],
     },
+
     {
       type: 'category',
       label: '۵. پشتیبانی و عملیات',
-      items: [
-        'modules/support/overview',
-      ],
+      items: ['modules/support/overview'],
     },
+
     {
       type: 'category',
       label: '۶. مالی و حسابداری',
-      items: [
-        'modules/finance/overview',
-      ],
+      items: ['modules/finance/overview'],
     },
+
     {
       type: 'category',
       label: '۷. امنیت و مدیریت ریسک',
-      items: [
-        'modules/security/overview',
-      ],
+      items: ['modules/security/overview'],
     },
+
     {
       type: 'category',
       label: '۸. توسعه کسب‌وکار',
-      items: [
-        'modules/business-development/overview',
-      ],
+      items: ['modules/business-development/overview'],
     },
+
     {
       type: 'category',
       label: '۹. ساختار سازمانی',
-      items: [
-        'modules/organization/overview',
-      ],
+      items: ['modules/organization/overview'],
     },
+
     {
       type: 'category',
       label: '۱۰. گزارش‌ها و تحلیل',
-      items: [
-        'modules/reporting/overview',
-      ],
+      items: ['modules/reporting/overview'],
     },
+
     {
       type: 'category',
       label: '۱۱. مدیریت کاربران و دسترسی',
-      items: [
-        'modules/user-management/overview',
-      ],
+      items: ['modules/user-management/overview'],
     },
+
     {
       type: 'category',
       label: '۱۲. اعلان‌ها و ارتباطات',
-      items: [
-        'modules/notifications/overview',
-      ],
+      items: ['modules/notifications/overview'],
     },
+
     {
       type: 'category',
       label: '۱۳. سرویس‌های یکپارچه‌سازی',
-      items: [
-        'modules/integration/overview',
-      ],
+      items: ['modules/integration/overview'],
     },
   ],
 };
