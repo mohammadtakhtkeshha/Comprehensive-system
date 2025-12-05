@@ -3,28 +3,24 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const baseUrl = process.env.BASE_URL || '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My 1st dinosaurs site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://daggerok.github.io',
-  baseUrl,
+  title: 'Comprehensive System Documentation',
+  tagline: 'Documentation for Comprehensive System',
+  url: 'https://mohammadtakhtkeshha.github.io',
+  baseUrl: '/Comprehensive-system/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'daggerok', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-examples', // Usually your repo name.
+  organizationName: 'mohammadtakhtkeshha', // GitHub username
+  projectName: 'Comprehensive-system', // Repository name
   deploymentBranch: 'gh-pages',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // i18n
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,17 +33,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mohammadtakhtkeshha/Comprehensive-system/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/mohammadtakhtkeshha/Comprehensive-system/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -60,9 +52,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My 1st dinosaurs site',
+        title: 'Comprehensive System',
         logo: {
-          alt: 'My 1st dinosaurs site logo',
+          alt: 'Comprehensive System Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -70,11 +62,11 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/daggerok/docusaurus-examples',
+            href: 'https://github.com/mohammadtakhtkeshha/Comprehensive-system',
             label: 'GitHub',
             position: 'right',
           },
@@ -87,7 +79,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Docs',
                 to: '/docs/intro',
               },
             ],
@@ -97,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/users/1490636/maksim-kostromin',
+                href: 'https://stackoverflow.com/',
               },
               {
                 label: 'Discord',
@@ -105,7 +97,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/daggerok',
+                href: 'https://twitter.com/',
               },
             ],
           },
@@ -118,12 +110,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/daggerok/docusaurus-examples',
+                href: 'https://github.com/mohammadtakhtkeshha/Comprehensive-system',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Maksim Kostromin. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Comprehensive System. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
