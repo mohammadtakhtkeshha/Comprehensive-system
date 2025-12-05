@@ -1,0 +1,67 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle with Gradient -->
+  <circle cx="75" cy="75" r="70" fill="url(#outerGradient)" opacity="0.1"/>
+  
+  <!-- Main Building -->
+  <g transform="translate(30, 20)">
+    <!-- Building Base -->
+    <rect x="10" y="60" width="80" height="50" fill="url(#buildingGradient)" rx="5"/>
+    
+    <!-- Building Top Section -->
+    <rect x="15" y="40" width="70" height="20" fill="url(#roofGradient)" rx="3"/>
+    
+    <!-- Pillars -->
+    <rect x="18" y="60" width="8" height="50" fill="#0066cc" opacity="0.8"/>
+    <rect x="30" y="60" width="8" height="50" fill="#0066cc" opacity="0.8"/>
+    <rect x="52" y="60" width="8" height="50" fill="#0066cc" opacity="0.8"/>
+    <rect x="64" y="60" width="8" height="50" fill="#0066cc" opacity="0.8"/>
+    <rect x="76" y="60" width="8" height="50" fill="#0066cc" opacity="0.8"/>
+    
+    <!-- Main Door -->
+    <rect x="35" y="85" width="30" height="25" fill="#ffcc00" rx="2"/>
+    <path d="M 35 85 L 50 97.5 L 35 110 Z" fill="#ffaa00"/>
+    
+    <!-- Windows -->
+    <rect x="18" y="68" width="6" height="8" fill="#ffffff" rx="1"/>
+    <rect x="26" y="68" width="6" height="8" fill="#ffffff" rx="1"/>
+    <rect x="56" y="68" width="6" height="8" fill="#ffffff" rx="1"/>
+    <rect x="64" y="68" width="6" height="8" fill="#ffffff" rx="1"/>
+    <rect x="72" y="68" width="6" height="8" fill="#ffffff" rx="1"/>
+    
+    <!-- Flag -->
+    <line x1="50" y1="40" x2="50" y2="25" stroke="#0066cc" stroke-width="2"/>
+    <rect x="50" y="25" width="20" height="12" fill="#00a651" rx="1"/>
+    <circle cx="58" cy="31" r="3" fill="#ffffff"/>
+    
+    <!-- Stars on Flag -->
+    <path d="M 62 29 L 63 31 L 65 31 L 63.5 32.5 L 64 35 L 62 33.5 L 60 35 L 60.5 32.5 L 59 31 L 61 31 Z" fill="#ffcc00"/>
+  </g>
+  
+  <!-- Floating Coins -->
+  <circle cx="25" cy="45" r="8" fill="#ffcc00" opacity="0.8">
+    <animate attributeName="cy" values="45;40;45" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="25" y="49" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">$</text>
+  
+  <circle cx="125" cy="60" r="7" fill="#ffcc00" opacity="0.8">
+    <animate attributeName="cy" values="60;55;60" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="125" y="64" font-family="Arial" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="bold">$</text>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="outerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a651;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00a651;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#008844;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+

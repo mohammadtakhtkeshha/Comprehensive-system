@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Comprehensive System Documentation',
-  tagline: 'Documentation for Comprehensive System',
+  title: 'سیستم جامع مدیریت PSP',
+  tagline: 'سامانه مدیریت پذیرندگان و پردازش تراکنش‌های بانکی',
   url: 'https://mohammadtakhtkeshha.github.io',
   baseUrl: '/Comprehensive-system/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // GitHub pages deployment config.
   organizationName: 'mohammadtakhtkeshha', // GitHub username
@@ -22,8 +22,19 @@ const config = {
 
   // i18n
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'fa',
+    locales: ['fa', 'en'],
+    localeConfigs: {
+      fa: {
+        label: 'فارسی',
+        direction: 'rtl',
+        htmlLang: 'fa-IR',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -36,11 +47,7 @@ const config = {
           editUrl:
             'https://github.com/mohammadtakhtkeshha/Comprehensive-system/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/mohammadtakhtkeshha/Comprehensive-system/edit/main/blog/',
-        },
+        blog: false, // غیرفعال کردن بلاگ
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -52,9 +59,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Comprehensive System',
+        title: 'سیستم مدیریت PSP',
         logo: {
-          alt: 'Comprehensive System Logo',
+          alt: 'PSP Management System Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -62,9 +69,14 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Docs',
+            label: 'مستندات',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {
+            type: 'docSidebar',
+            sidebarId: 'modules',
+            position: 'left',
+            label: 'ماژول‌ها',
+          },
           {
             href: 'https://github.com/mohammadtakhtkeshha/Comprehensive-system',
             label: 'GitHub',
@@ -76,46 +88,29 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'مستندات',
             items: [
               {
-                label: 'Docs',
+                label: 'شروع کار',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/',
+                label: 'ماژول‌ها',
+                to: '/docs/modules',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'بانک رفاه کارگران',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/mohammadtakhtkeshha/Comprehensive-system',
+                label: 'وب‌سایت بانک',
+                href: 'https://www.refah-bank.ir',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Comprehensive System. Built with Docusaurus.`,
+        copyright: `حق نشر © ${new Date().getFullYear()} سیستم جامع مدیریت PSP - بانک رفاه کارگران.`,
       },
       prism: {
         theme: lightCodeTheme,

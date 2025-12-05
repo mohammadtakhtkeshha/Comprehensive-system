@@ -1,0 +1,77 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient Circle -->
+  <circle cx="150" cy="150" r="140" fill="url(#bgGradient)" opacity="0.1"/>
+  
+  <!-- Card Shadow -->
+  <ellipse cx="150" cy="260" rx="100" ry="20" fill="#000000" opacity="0.1"/>
+  
+  <!-- POS Terminal Card -->
+  <g transform="translate(50, 50)">
+    <!-- Card Body -->
+    <rect x="0" y="0" width="200" height="140" rx="15" fill="url(#cardGradient)"/>
+    
+    <!-- Card Inner Shadow -->
+    <rect x="10" y="10" width="180" height="120" rx="10" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Screen Area -->
+    <rect x="20" y="25" width="160" height="80" rx="8" fill="#1a1a1a"/>
+    <rect x="25" y="30" width="150" height="70" rx="5" fill="#2a2a2a"/>
+    
+    <!-- Screen Content -->
+    <text x="100" y="55" font-family="Arial, monospace" font-size="12" fill="#00ff00" text-anchor="middle">POS Terminal</text>
+    <line x1="30" y1="65" x2="170" y2="65" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+    <text x="100" y="80" font-family="Arial, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Ready</text>
+    
+    <!-- Keypad Area -->
+    <circle cx="60" cy="120" r="8" fill="#ffffff" opacity="0.2"/>
+    <circle cx="100" cy="120" r="8" fill="#ffffff" opacity="0.2"/>
+    <circle cx="140" cy="120" r="8" fill="#ffffff" opacity="0.2"/>
+    
+    <!-- NFC/Contactless Icon -->
+    <g transform="translate(160, 25)">
+      <circle cx="0" cy="0" r="12" fill="#0066cc" opacity="0.8"/>
+      <path d="M -5,-5 L 5,5 M 5,-5 L -5,5" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Chip -->
+    <rect x="25" y="100" width="25" height="20" rx="3" fill="#ffcc00"/>
+    <rect x="28" y="103" width="19" height="14" rx="2" fill="#1a1a1a"/>
+    <line x1="35" y1="103" x2="35" y2="117" stroke="#ffcc00" stroke-width="1"/>
+    <line x1="42" y1="103" x2="42" y2="117" stroke="#ffcc00" stroke-width="1"/>
+  </g>
+  
+  <!-- Floating Particles -->
+  <circle cx="80" cy="80" r="3" fill="#0066cc" opacity="0.6">
+    <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="220" cy="100" r="2" fill="#00a651" opacity="0.6">
+    <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="220" r="2.5" fill="#ffcc00" opacity="0.6">
+    <animate attributeName="cy" values="220;200;220" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Glow Effect -->
+  <circle cx="150" cy="120" r="120" fill="url(#glowGradient)" opacity="0.1">
+    <animate attributeName="r" values="120;130;120" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a651;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0088dd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a651;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+</svg>
+

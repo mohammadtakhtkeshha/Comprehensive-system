@@ -4,27 +4,297 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* رنگ‌های بانک رفاه کارگران */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #0066cc;
+  --ifm-color-primary-dark: #0059b3;
+  --ifm-color-primary-darker: #0053a6;
+  --ifm-color-primary-darkest: #004489;
+  --ifm-color-primary-light: #1a75d6;
+  --ifm-color-primary-lighter: #267cd9;
+  --ifm-color-primary-lightest: #4d92e0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --bank-color-primary: #0066cc;
+  --bank-color-secondary: #00a651;
+  --bank-color-accent: #ffcc00;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #4d92e0;
+  --ifm-color-primary-dark: #3a7fd6;
+  --ifm-color-primary-darker: #3476d0;
+  --ifm-color-primary-darkest: #2b61ad;
+  --ifm-color-primary-light: #60a5e6;
+  --ifm-color-primary-lighter: #6aace8;
+  --ifm-color-primary-lightest: #87bfed;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 15s ease infinite;
+}
+
+/* استایل صفحه اصلی */
+.heroBanner {
+  background: linear-gradient(135deg, #0066cc 0%, #00a651 100%);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+  opacity: 0.3;
+  animation: float 20s infinite ease-in-out;
+}
+
+.heroTitle {
+  animation: fadeInUp 0.8s ease-out;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.heroSubtitle {
+  animation: fadeInUp 1s ease-out;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bankName {
+  animation: fadeInUp 1.2s ease-out;
+  color: var(--bank-color-accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* کارت‌های ویژگی */
+.featureCard {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 102, 204, 0.2);
+}
+
+.featureCard:nth-child(1) { animation-delay: 0.1s; }
+.featureCard:nth-child(2) { animation-delay: 0.2s; }
+.featureCard:nth-child(3) { animation-delay: 0.3s; }
+.featureCard:nth-child(4) { animation-delay: 0.4s; }
+.featureCard:nth-child(5) { animation-delay: 0.5s; }
+.featureCard:nth-child(6) { animation-delay: 0.6s; }
+.featureCard:nth-child(7) { animation-delay: 0.7s; }
+.featureCard:nth-child(8) { animation-delay: 0.8s; }
+.featureCard:nth-child(9) { animation-delay: 0.9s; }
+
+.featureEmoji {
+  font-size: 3rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.featureEmoji:nth-child(even) {
+  animation-delay: 1.5s;
+}
+
+/* آیکون پوز */
+.posIcon {
+  width: 150px;
+  height: 150px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #0066cc 0%, #00a651 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* دکمه‌ها */
+.heroButton {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* بخش ویژگی‌ها */
+.featuresSection {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--bank-color-primary);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0066cc 0%, #00a651 100%);
+  border-radius: 2px;
+}
+
+/* بهبود کارت‌ها */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+}
+
+/* Image Styles */
+.posIcon img {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.posIcon:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.bank-logo img {
+  filter: drop-shadow(0 5px 10px rgba(255, 204, 0, 0.3));
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Enhanced Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .posIcon {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
 }

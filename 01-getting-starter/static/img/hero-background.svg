@@ -1,0 +1,50 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0088dd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a651;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="circleGradient" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroGradient)"/>
+  
+  <!-- Decorative Circles -->
+  <circle cx="200" cy="200" r="150" fill="url(#circleGradient)">
+    <animate attributeName="r" values="150;180;150" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1720" cy="300" r="200" fill="url(#circleGradient)">
+    <animate attributeName="r" values="200;230;200" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="960" cy="800" r="250" fill="url(#circleGradient)">
+    <animate attributeName="r" values="250;280;250" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="300" cy="500" r="8" fill="rgba(255,255,255,0.3)">
+    <animate attributeName="cy" values="500;400;500" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1600" cy="600" r="12" fill="rgba(255,255,255,0.2)">
+    <animate attributeName="cy" values="600;500;600" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1200" cy="400" r="6" fill="rgba(255,255,255,0.4)">
+    <animate attributeName="cy" values="400;300;400" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
