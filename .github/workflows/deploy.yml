@@ -1,12 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy Docusaurus to GitHub Pages
 
 on:
   push:
     branches:
       - main
-    paths:
-      - '01-getting-starter/**'
-      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,49 +12,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./01-getting-starter
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          submodules: recursive
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: 01-getting-starter/package-lock.json
+          node-version: 18
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build website
+      - name: Build Docusaurus website
         run: npm run build
-        env:
-          BASE_URL: '/Comprehensive-system/'
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 01-getting-starter/build
+          path: build
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
